@@ -19,7 +19,9 @@ public class App {
 
         BufferedImage image = ImageIO.read(new File("/home/ashqur/401/bitmap-transformer/app/src/main/resources/test2.bmp"));
         BitMap imageManpulation = new BitMap() ;
-        imageManpulation.invert(image);
+//        imageManpulation.invert(image);
+//        imageManpulation.borader(image);
+        System.out.println(imageManpulation.fon(5));
     }
 
 
