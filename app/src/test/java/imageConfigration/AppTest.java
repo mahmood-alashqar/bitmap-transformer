@@ -11,4 +11,19 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+    @Test
+    public void testInvert(){
+        App invertObj = new App();
+        assertNotNull("Invert method is not working ", invertObj.invert("path/bi/mm.bmp","path/bi/mm.bmp",invert()));
+    }
+    @Test
+    public void testInvert(){
+        App borderObj = new App();
+        assertNotNull("Border method is not working ", borderObj.border("path/bi/mm.bmp","path/bi/mm.bmp",border()));
+    }
+    @Test
+    public void testInvert(){
+        App randomizeObj = new App();
+        assertNotNull("Randomize method is not working ", randomizeObj.invert("path/bi/mm.bmp","path/bi/mm.bmp",randomize()));
+    }
 }

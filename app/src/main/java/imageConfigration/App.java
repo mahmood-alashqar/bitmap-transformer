@@ -17,13 +17,24 @@ public class App {
     public static void main(String[] args) throws IOException {
 
 
-        BufferedImage image = ImageIO.read(new File("/home/ashqur/401/bitmap-transformer/app/src/main/resources/test2.bmp"));
+        BufferedImage image = ImageIO.read(new File(args[0]));
         BitMap imageManpulation = new BitMap() ;
-//        imageManpulation.invert(image);
-//        imageManpulation.borader(image);
-        System.out.println(imageManpulation.fon(5));
+        switch(args[2]){
+            case "invert":
+                imageManpulation.invert(image,args[1]);
+                break;
+            case "boarder":
+                imageManpulation.border(image,args[1]);
+                break;
+            case "randomize":
+                imageManpulation.randomize(image,args[1]);
+                break;
+               default:
+                    System.out.println("Please try again" );
+                    break;
+        }
+
+
     }
-
-
 
 }
